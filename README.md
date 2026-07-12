@@ -5,7 +5,7 @@ The game challenges players to remember and repeat an increasing sequence of col
 
 ## 🚀 Live Demo
 
-🔗 https://your-vercel-url.vercel.app/
+🔗https://simon-says-game-silk-chi.vercel.app/
 
 ## 📸 Preview
 
