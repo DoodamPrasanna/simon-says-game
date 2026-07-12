@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(
+    135deg,
+    #0f172a,
+    #111827,
+    #1e293b
+    );
+
+    overflow:hidden;
+}
+
+.game-container{
+    text-align:center;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,0.05);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,0.1);
+
+    box-shadow:
+    0 0 40px rgba(0,0,0,0.4);
+}
+
+h1{
+    color:white;
+    font-size:3rem;
+    margin-bottom:10px;
+    letter-spacing:2px;
+}
+
+h1 span{
+    color:#38bdf8;
+}
+
+h3{
+    color:#cbd5e1;
+    margin-bottom:20px;
+    font-weight:400;
+}
+
+.score-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+
+    color:white;
+
+    margin-bottom:25px;
+}
+
+.btn-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.line1,
+.line2{
+    display:flex;
+}
+
+.btn{
+    width:130px;
+    height:130px;
+
+    margin:15px;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    transition:0.25s;
+
+    border:5px solid rgba(255,255,255,0.2);
+}
+
+.btn:hover{
+    transform:scale(1.08);
+}
+
+.yellow{
+    background:#f59e0b;
+    box-shadow:0 0 25px #f59e0b;
+}
+
+.green{
+    background:#22c55e;
+    box-shadow:0 0 25px #22c55e;
+}
+
+.red{
+    background:#ef4444;
+    box-shadow:0 0 25px #ef4444;
+}
+
+.blue{
+    background:#3b82f6;
+    box-shadow:0 0 25px #3b82f6;
+}
+
+.gameflash{
+    background:white !important;
+
+    box-shadow:
+    0 0 50px white,
+    0 0 100px white;
+}
+
+.userflash{
+    transform:scale(0.9);
+    filter:brightness(0.5);
+}
+
+.footer{
+    color:#94a3b8;
+    margin-top:25px;
+    font-size:14px;
+}
+
+@media(max-width:600px){
+
+    .btn{
+        width:90px;
+        height:90px;
+    }
+
+    h1{
+        font-size:2rem;
+    }
+
+    .score-container{
+        flex-direction:column;
+        gap:10px;
+    }
+}
