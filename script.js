@@ -7,6 +7,7 @@ let started = false;
 let level = 0;
 
 let h3 = document.querySelector("h3");
+let startBtn = document.getElementById("startBtn");
 
 let highScore = localStorage.getItem("highScore") || 0;
 
@@ -14,14 +15,24 @@ document.getElementById(
     "highScore"
 ).innerText = `High Score: ${highScore}`;
 
-document.addEventListener("keypress", function () {
+// Start Game Function
+function startGame() {
 
     if (!started) {
+
         started = true;
+
+        startBtn.style.display = "none";
+
         levelUp();
     }
+}
 
-});
+// Desktop Keyboard Support
+document.addEventListener("keypress", startGame);
+
+// Mobile + Desktop Button Support
+startBtn.addEventListener("click", startGame);
 
 function gameFlash(btn) {
 
@@ -85,7 +96,7 @@ function checkAns(idx) {
         setTimeout(() => {
 
             document.body.style.background =
-            "linear-gradient(135deg,#0f172a,#111827,#1e293b)";
+                "linear-gradient(135deg,#0f172a,#111827,#1e293b)";
 
         }, 300);
 
@@ -101,11 +112,11 @@ function checkAns(idx) {
             document.getElementById(
                 "highScore"
             ).innerText =
-            `High Score: ${highScore}`;
+                `High Score: ${highScore}`;
         }
 
         h3.innerHTML =
-        `Game Over! Score: <b>${level}</b><br>Press Any Key To Restart`;
+            `Game Over! Score: <b>${level}</b><br>Press Any Key or Tap Start`;
 
         reset();
     }
@@ -139,6 +150,8 @@ function reset() {
     userSeq = [];
 
     level = 0;
+
+    startBtn.style.display = "inline-block";
 
     document.getElementById(
         "currentScore"
